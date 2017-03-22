@@ -1,5 +1,6 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="omdbApp">
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}Viberr{% endblock %}</title>
@@ -57,5 +58,7 @@
 </nav>
 {% block body %}
 {% endblock %}
+<script src="{% static 'music/js/angular.js' %}"></script>
+<script src="{% static 'music/js/script.js' %}"></script>
 </body>
 </html>

@@ -3,9 +3,10 @@
 {% block albums_active %}active{% endblock %}
 
 {% block body %}
-<div class="container-fluid songs-container">
+<div class="container-fluid songs-container" ng-controller="MainController">
 
     <div class="row">
+		<h1>{$ testVar $}</h1>
 
         <!-- Left Album Info -->
         <div class="col-sm-4 col-md-3">
@@ -18,7 +19,7 @@
                             <h3>No image to display</h3>
                         {% endif %}
                     </a>
-                    <h1>{{ album.album_title }} <small>{{ album.genre }}</small></h1>
+                    <h1><span id="album-title">{{ album.album_title }}</span> <small>{{ album.genre }}</small></h1>
                     <h2>{{ album.artist }}</h2>
                 </div>
             </div>
@@ -82,6 +83,25 @@
             </div>
 
         </div>
+		<div class="col-sm-8 col-md-9">
+
+            <div class="panel panel-default" ng-repeat="movie in moviesArray">
+                <div class="panel-body">
+					<div class="row" >
+						<div class="col-sm-4">
+							<img src="{$ movie.Poster $}" alt="" />
+						</div>
+						<div class="col-sm-6">
+							Title: {$ movie.Title $} <br>
+							Type: {$ movie.Type $} <br>
+							Year: {$ movie.Year $} <br>
+						</div>
+					</div>
+					<br>
+                </div>
+            </div>
+
+		</div>
 
     </div>
 
