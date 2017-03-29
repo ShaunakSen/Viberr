@@ -26,3 +26,7 @@ ul.errorlist > li {
 .glyphicon-star.active {
     color: #FDB230;
 }
+
+div#mp3_player{ width:500px; height:80px;  margin:50px auto; }
+div#mp3_player > div > audio{  width:500px; background:#000; float:left;}
+div#mp3_player > canvas{ width:500px; height:50px; background:#002D3C; float:left;}
